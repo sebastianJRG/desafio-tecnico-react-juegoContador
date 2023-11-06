@@ -1,27 +1,36 @@
-# React + TypeScript + Vite
+# Juego Contador
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Resumen
+Desarrollar en React un juego muy simple en el que los usuarios puedan competir contra sí mismos intentando
+clickear la mayor cantidad de veces posible un botón durante 5 segundos.
+Descripción del ejercicio
+Crear una App web en React llamada “JuegoContador” que muestre en todo momento:
+• Dos botones: uno para iniciar el juego y otro para clickear durante el mismo
+• Un indicador de puntaje máximo iniciado en 0
+Al presionar el botón de inicio, dicho botón debe deshabilitarse y el componente debe mostrar una cuenta regresiva
+visual con los mensajes "Preparados", "Listos" y "Ya" en intervalos de 1 segundo.
+Al mostrarse el "Ya", el botón para clickear debe habilitarse durante 5 segundos, permitiendo al usuario clickearlo
+tantas veces como desee. El usuario debe poder ver durante el juego el tiempo restante disponible para clickear el
+botón y el contador actual.
+Concluido el tiempo, el botón para clickear debe deshabilitarse, el botón para iniciar debe habilitarse nuevamente
+y, en caso de que se haya superado el puntaje máximo, el valor mostrado debe cambiar por el actual.
+Requisitos
+1. Crea una App web en React llamada "JuegoContador".
+2. Incluir los estados internos necesarios para cumplir con la funcionalidad detallada.
+3. Definir una distribución de elementos en la pantalla simple y funcional.
+4. Resolver la necesidad utilizando componentes funcionales.
+5. Mostrar la información solicitada con los elementos HTML que considere más apropiados según el caso.
+Puedes utilizar una librería de componentes (como MUI) si lo consideras útil y simplifica la tarea.
+6. Puedes agregar estilos o elementos visuales adicionales para hacer el juego de contador más atractivo.
+7. Entregar el código en un repositorio de GitHub (o la plataforma de preferencia) público. Se deberá incluir
+un README con instrucciones precisas y claras sobre cómo correr la solución en un entorno local.
+8. Se evaluará la prolijidad del código, su mantenibilidad y el uso de buenas prácticas de programación.
+9. El enunciado es suficientemente explicativo para avanzar, y no se responderán preguntas. En caso de algún
+supuesto o consideración que consideres relevante para la solución, por favor incluirlo en una sección
+aparte dentro del mismo README. 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+Para correr la aplicacion ingrese en consola:
+```bash
+npm install
+npm run dev
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
